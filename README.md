@@ -62,6 +62,36 @@ Several configurations were tested:
 The improved retrieval returned the relevant clause at Rank 1 with a similarity score of 0.7121.
 
 This experiment highlighted the importance of query formulation when retrieving legally similar but contextually different clauses.
+## 🧪 PoV Evaluation Evidence
+
+### Initial Retrieval Failure
+
+The initial configuration failed to sufficiently retrieve the CUAD ground-truth clause.
+
+!(images/Question-eval.png)
+
+### Increased Chunk Size to 1500
+
+The retrieved evidence was evaluated against CUAD human-labelled annotations.
+
+!(images/Test_Fail1.png)
+
+### Increased Retrieval Dept
+
+The retrieved evidence was evaluated against CUAD human-labelled annotations.
+
+!(images/Test_Fail2.png)
+
+
+### Improved Retrieval
+
+After investigating the failure and testing a focused retrieval query, the relevant clause was retrieved at Rank 1.
+
+![Final PASS result](images/Test_Pass.png)
+
+**Result:** PASS  
+**Relevant Evidence:** Rank #1  
+**Similarity Score:** 0.7121
 
 ## Technology
 
