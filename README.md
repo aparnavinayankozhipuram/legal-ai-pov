@@ -74,13 +74,13 @@ The initial configuration failed to sufficiently retrieve the CUAD ground-truth 
 
 The retrieved evidence was evaluated against CUAD human-labelled annotations.
 
-!(images/Test_Fail1.png)
+![Test Fail1](images/Test_Fail1.png)
 
 ### Increased Retrieval Dept
 
 The retrieved evidence was evaluated against CUAD human-labelled annotations.
 
-!(images/Test_Fail2.png)
+![Test Fail2](images/Test_Fail2.png)
 
 
 ### Improved Retrieval
