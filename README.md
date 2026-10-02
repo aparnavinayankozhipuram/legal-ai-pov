@@ -68,24 +68,37 @@ This experiment highlighted the importance of query formulation when retrieving 
 
 The initial configuration failed to sufficiently retrieve the CUAD ground-truth clause.
 
-!(images/Question-eval.png)
+![Initial Retrieval Failure](images/Question-eval.png)
 
-### Increased Chunk Size to 1500
 
-The retrieved evidence was evaluated against CUAD human-labelled annotations.
+### Experiment 1 — Increased Chunk Size
+
+The chunk size was increased to **1500** with an overlap of **300** to test whether additional contractual context would improve retrieval.
+
+The relevant clause was still not sufficiently represented in the retrieved results.
 
 ![Test Fail1](images/Test_Fail1.png)
+**Result:** FAIL
 
-### Increased Retrieval Dept
+### Experiment 2 — Increased Retrieval Depth
 
-The retrieved evidence was evaluated against CUAD human-labelled annotations.
+Retrieval depth was increased from **Top-3 to Top-5** to determine whether the relevant clause appeared further down the ranked results.
+
+The relevant clause was still not sufficiently represented.
 
 ![Test Fail2](images/Test_Fail2.png)
 
+**Result:** FAIL
 
-### Improved Retrieval
+### Experiment 3 — Improved Query Formulation
 
-After investigating the failure and testing a focused retrieval query, the relevant clause was retrieved at Rank 1.
+Error analysis showed that the original **"License Grant"** question was retrieving semantically related but legally different language, including **"No License"** provisions.
+
+A more focused retrieval query was tested:
+
+> `exclusive right granted to distributor to sell and distribute products in the market`
+
+This surfaced the relevant CUAD ground-truth clause at **Rank #1**.
 
 ![Final PASS result](images/Test_Pass.png)
 
